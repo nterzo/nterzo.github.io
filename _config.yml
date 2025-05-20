@@ -6,9 +6,9 @@ email: firstname.lastname@mpi-sp.org
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
+keywords: 
+description:
+canonical: https://nterzo.github.io/
 
 google_scholar: https://scholar.google.com/citations?user=4FVcLDIAAAAJ&hl=en
 orcid: https://orcid.org/0009-0008-8042-890X
@@ -39,10 +39,3 @@ remote_theme: yaoyao-liu/minimal-light
 exclude:
   - Gemfile
   - Gemfile.lock
-  - README.md
-  - README_zh_Hans.md
-  - README_zh_Hant.md
-  - README_de.md
-  - LICENSE
-  - minimal-light.gemspec
-  - html_source_file/

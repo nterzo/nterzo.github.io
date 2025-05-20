@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ site.title }} | {{ site.affiliation }}</title>
+    <title>{{ site.title }} | {{ site.position }} at {{ site.affiliation }} </title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,8 +49,9 @@
 
       .main-content {
         max-width: 700px;
-        width: 70%;
+        width: 100%;
         margin-right: auto;
+
       }
 
       @media (max-width: 768px) {
@@ -63,15 +64,61 @@
           min-width: 100%;
           margin-bottom: 2rem;
         }
+      }
+      .fixed-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;           
+        background-color: var(--global-bg-color, white);
+        border-bottom: 0.06px solid #050861;
+        display: fixed;
+        z-index: 10000;         
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
 
-        .main-content {
-          width: 100%;
+      .navbar-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #050861; 
+        height: 100%;
+        display: inline-fixed;
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+        text-align: center;
+        
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .fixed-navbar {
+          background-color: #20212b;
+          border-bottom-color: #3cc9e2;
+        }
+        .navbar-title {
+          color: #3cc9e2;    
+        }
+      }
+      body {
+        padding-top: 50px; 
+      }
+      .image.avatar {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .image.avatar {
+          margin-top: 1.2rem; 
         }
       }
     </style>
 
   </head>
   <body>
+    <nav class="fixed-navbar">
+      <div class="navbar-title"><h1>{{ site.title }}</h1></div>
+    </nav>
+    
     <div class="wrapper">
   
       <!-- Header (on the right) -->
@@ -79,9 +126,7 @@
         {% if site.avatar %}
         <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
         {% endif %}
-  
-        <h1>{{ site.title }}</h1>
-  
+    
         {% if site.position %}
         <div style="font-size:1.10rem;">{{ site.position }}</div>
         {% endif %}
