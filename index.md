@@ -15,8 +15,7 @@ During my studies, I completed two internships as a Cybersecurity Engineer in th
 
 ## Research Interests
 - **Security Analysis of Cryptographic Protocols**
-- **Formal Verification of Protocols**
-- **Cryptography in the Wild**
+- **Secure Messaging**
 - **Post-Quantum Cryptography**
 
 
